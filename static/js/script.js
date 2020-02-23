@@ -4,7 +4,7 @@
 
             var var_mapoptions = {
                 center: var_location,
-                zoom: 25
+                zoom: 14
             };
 
             var var_map = new google.maps.Map(document.getElementById("map-container"),
