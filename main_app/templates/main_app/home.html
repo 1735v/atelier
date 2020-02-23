@@ -1,139 +1,62 @@
 {%extends 'main_app/base.html'%}
 {%block title%}
-      Home
+Home
 {%endblock%}
 
 
 {%block mask%}
 <!--Mask-->
-        <div id="intro" class="view">
+<div id="intro" class="view">
 
-            <div class="mask rgba-black-strong">
+    <div class="mask rgba-black-strong">
 
-                <div class="container-fluid d-flex align-items-center justify-content-center h-100">
+        <div class="container-fluid d-flex align-items-center justify-content-center h-100">
 
-                    <div class="row d-flex justify-content-center text-center">
+            <div class="row d-flex justify-content-center text-center">
 
-                        <div class="col-md-10">
+                <div class="col-md-10">
 
-                            <!-- Heading -->
-                            <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Travel</h2>
+                    <!-- Heading -->
+                    <h2 class="display-4 font-weight-bold white-text pt-5 mb-2">Travel</h2>
 
-                            <!-- Divider -->
-                            <hr class="hr-light">
+                    <!-- Divider -->
+                    <hr class="hr-light">
 
-                            <!-- Description -->
-                            <h4 class="white-text my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                Deleniti
-                                consequuntur.</h4>
+                    <!-- Description -->
+                    <h4 class="white-text my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Deleniti
+                        consequuntur.</h4>
 
-                            <button type="button" class="btn btn-outline-white">Read more<i class="fa fa-book ml-2"></i></button>
-
-                        </div>
-
-                    </div>
+                    <button type="button" class="btn btn-outline-white">Read more<i class="fa fa-book ml-2"></i>
+                    </button>
 
                 </div>
 
             </div>
 
         </div>
-        <!--/.Mask-->
+
+    </div>
+
+</div>
+<!--/.Mask-->
 
 {%endblock%}
 
 
 {%block map_and_form%}
-  <!--Section heading-->
-  <h2 class="section-heading h1 pt-4">Contact us</h2>
+<!--Section heading-->
+<h2 class="section-heading h1 pt-4">Contact us</h2>
 
-  <p class="section-description pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
+<p class="section-description pb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error
     amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a
     pariatur accusamus veniam.</p>
 
-  <div class="row">
+<div class="row">
     <!--Grid column-->
     <div class="col-lg-5 mb-4">
 
-      <!--Form with header-->
-      <div class="card">
 
-        <div class="card-body">
-          <!--Header-->
-          <div class="form-header blue accent-1">
-            <h3><i class="fas fa-envelope"></i> Write to us:</h3>
-          </div>
-
-          <p>We'll write rarely, but with only the best content.</p>
-          <br>
-
-          <!--Body-->
-          <div class="md-form">
-            <i class="fas fa-user prefix grey-text"></i>
-            <input type="text" id="form-name" class="form-control">
-            <label for="form-name">Your name</label>
-          </div>
-
-          <div class="md-form">
-            <i class="fas fa-envelope prefix grey-text"></i>
-            <input type="text" id="form-email" class="form-control">
-            <label for="form-email">Your email</label>
-          </div>
-
-          <div class="md-form">
-            <i class="fas fa-tag prefix grey-text"></i>
-            <input type="text" id="form-Subject" class="form-control">
-            <label for="form-Subject">Subject</label>
-          </div>
-
-          <div class="md-form">
-            <i class="fas fa-pencil-alt prefix grey-text"></i>
-            <textarea id="form-text" class="form-control md-textarea" rows="3"></textarea>
-            <label for="form-text">Icon Prefix</label>
-          </div>
-
-          <div class="text-center mt-4">
-            <button class="btn btn-primary waves-effect waves-light">Submit</button>
-          </div>
-
-        </div>
-
-      </div>
-      <!--Form with header-->
-
-    </div>
-    <!--Grid column-->
-
-    <!--Grid column-->
-    <div class="col-lg-7">
-
-      <!--Google map-->
-      <div id="map-container-google-11" class="z-depth-1-half map-container-6" style="height: 400px">
-        <iframe src="https://maps.google.com/maps?q=new%20delphi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-          frameborder="0" style="border:0" allowfullscreen></iframe>
-      </div>
-
-      <br>
-      <!--Buttons-->
-      <div class="row text-center">
-        <div class="col-md-4">
-          <a class="btn-floating blue accent-1"><i class="fas fa-map-marker-alt"></i></a>
-          <p>San Francisco, CA 94126</p>
-          <p>United States</p>
-        </div>
-
-        <div class="col-md-4">
-          <a class="btn-floating blue accent-1"><i class="fas fa-phone"></i></a>
-          <p>+ 01 234 567 89</p>
-          <p>Mon - Fri, 8:00-22:00</p>
-        </div>
-
-        <div class="col-md-4">
-          <a class="btn-floating blue accent-1"><i class="fas fa-envelope"></i></a>
-          <p>info@gmail.com</p>
-          <p>sale@gmail.com</p>
-        </div>
-      </div>
 
     </div>
     <!--Grid column-->
@@ -285,18 +208,19 @@
                     <div class="col-lg-5 col-md-12">
 
                         <!-- Form contact -->
-                        <form class="p-5 grey-text" action= '.' method="POST">
+                        <form id="form" class="p-5 grey-text" >
                             {% csrf_token %}
-                            <div class="md-form form-sm"> <i class="fa fa-user prefix"></i>
+                            <div class="md-form form-sm"><i class="fa fa-user prefix"></i>
                                 <input type="text" id="form3" class="form-control form-control-sm" name="name">
                                 <label for="form3">Your name</label>
                             </div>
-                            <div class="md-form form-sm"> <i class="fa fa-envelope prefix"></i>
+                            <div class="md-form form-sm"><i class="fa fa-envelope prefix"></i>
                                 <input type="text" id="form2" class="form-control form-control-sm" name="email">
                                 <label for="form2">Your email</label>
                             </div>
-                            <div class="md-form form-sm"> <i class="fa fa-pencil prefix"></i>
-                                <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4" name="message"></textarea>
+                            <div class="md-form form-sm"><i class="fa fa-pencil prefix"></i>
+                                <textarea type="text" id="form8" class="md-textarea form-control form-control-sm"
+                                          rows="4" name="message"></textarea>
                                 <label for="form8">Your message</label>
                             </div>
                             <div class="text-center mt-4">
@@ -316,7 +240,7 @@
                             <!--Grid column-->
                             <div class="col-lg-4 col-md-12 mb-3">
 
-                                <p><i class="fa fa-map fa-1x mr-2 grey-text"></i>New York, NY 10012</p>
+                                <p><i class="fa fa-map fa-1x mr-2 grey-text"></i>München, 80807 </p>
 
                             </div>
                             <!--Grid column-->
@@ -324,7 +248,7 @@
                             <!--Grid column-->
                             <div class="col-lg-4 col-md-6 mb-3">
 
-                                <p><i class="fa fa-building fa-1x mr-2 grey-text"></i>Mon - Fri, 8:00-22:00</p>
+                                <p><i class="fa fa-building fa-1x mr-2 grey-text"></i>Mo - Fr 9:00-18:00 Su 9:00 - 13.00</p>
 
                             </div>
                             <!--Grid column-->
@@ -332,7 +256,7 @@
                             <!--Grid column-->
                             <div class="col-lg-4 col-md-6 mb-3">
 
-                                <p><i class="fa fa-phone fa-1x mr-2 grey-text"></i>+ 01 234 567 89</p>
+                                <p><i class="fa fa-phone fa-1x mr-2 grey-text"></i>089-35062965</p>
 
                             </div>
                             <!--Grid column-->
@@ -341,7 +265,25 @@
                         <!--Grid row-->
 
                         <!--Google map-->
-                        <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
+
+
+                        <!--Google map-->
+                        <div id="map"></div>
+                            <script>
+                              var map;
+                              function initMap() {
+                                map = new google.maps.Map(document.getElementById('map'), {
+                                  center: {lat: 48.181981 , lng: 11.568084},
+                                  zoom: 17.7
+                                });
+                              }
+                            </script>
+                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgqwkUfPqr4r0cVDUNTuYUD0uKepaMeNk&callback=initMap"
+                            async defer></script>
+
+
+
+
 
                     </div>
                     <!--Grid column-->
@@ -356,140 +298,7 @@
     </main>
     <!--Main layout-->
 
-    <!-- Footer -->
-    <footer class="page-footer font-small unique-color-dark">
-
-        <!-- Social buttons -->
-        <div class="primary-color">
-            <div class="container">
-                <!--Grid row-->
-                <div class="row py-4 d-flex align-items-center">
-
-                    <!--Grid column-->
-                    <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
-                        <h6 class="mb-0 white-text">Get connected with us on social networks!</h6>
-                    </div>
-                    <!--Grid column-->
-
-                    <!--Grid column-->
-                    <div class="col-md-6 col-lg-7 text-center text-md-right">
-                        <!--Facebook-->
-                        <a class="fb-ic ml-0">
-                            <i class="fab fa-facebook white-text mr-4"> </i>
-                        </a>
-                        <!--Twitter-->
-                        <a class="tw-ic">
-                            <i class="fab fa-twitter white-text mr-4"> </i>
-                        </a>
-                        <!--Google +-->
-                        <a class="gplus-ic">
-                            <i class="fab fa-google-plus white-text mr-4"> </i>
-                        </a>
-                        <!--Linkedin-->
-                        <a class="li-ic">
-                            <i class="fab fa-linkedin white-text mr-4"> </i>
-                        </a>
-                        <!--Instagram-->
-                        <a class="ins-ic">
-                            <i class="fab fa-instagram white-text mr-lg-4"> </i>
-                        </a>
-                    </div>
-                    <!--Grid column-->
-
-                </div>
-                <!--Grid row-->
-            </div>
-        </div>
-        <!-- Social buttons -->
-
-        <!--Footer Links-->
-        <div class="container mt-5 mb-4 text-center text-md-left">
-            <div class="row mt-3">
-
-                <!--First column-->
-                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <strong>Company name</strong>
-                    </h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>Here you can use rows and columns here to organize your footer content. Lorem ipsum dolor sit
-                        amet, consectetur adipisicing elit.</p>
-                </div>
-                <!--/.First column-->
-
-                <!--Second column-->
-                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <strong>Products</strong>
-                    </h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">MDBootstrap</a>
-                    </p>
-                    <p>
-                        <a href="#!">MDWordPress</a>
-                    </p>
-                    <p>
-                        <a href="#!">BrandFlow</a>
-                    </p>
-                    <p>
-                        <a href="#!">Bootstrap Angular</a>
-                    </p>
-                </div>
-                <!--/.Second column-->
-
-                <!--Third column-->
-                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <strong>Useful links</strong>
-                    </h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <a href="#!">Your Account</a>
-                    </p>
-                    <p>
-                        <a href="#!">Become an Affiliate</a>
-                    </p>
-                    <p>
-                        <a href="#!">Shipping Rates</a>
-                    </p>
-                    <p>
-                        <a href="#!">Help</a>
-                    </p>
-                </div>
-                <!--/.Third column-->
-
-                <!--Fourth column-->
-                <div class="col-md-4 col-lg-3 col-xl-3">
-                    <h6 class="text-uppercase font-weight-bold">
-                        <strong>Contact</strong>
-                    </h6>
-                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
-                    <p>
-                        <i class="fas fa-home"></i></i> New York, NY 10012, US</p>
-                    <p>
-                        <i class="fa fa-envelope mr-3"></i> info@example.com</p>
-                    <p>
-                        <i class="fa fa-phone mr-3"></i> + 01 234 567 88</p>
-                    <p>
-                        <i class="fa fa-print mr-3"></i> + 01 234 567 89</p>
-                </div>
-                <!--/.Fourth column-->
-
-            </div>
-        </div>
-        <!--/.Footer Links-->
-
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2018 Copyright:
-            <a href="https://mdbootstrap.com/bootstrap-tutorial/"> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-
-    </footer>
-    <!-- Footer -->
 
 
 
-
-{%endblock%}
+    {%endblock%}

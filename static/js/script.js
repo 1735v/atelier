@@ -25,3 +25,23 @@
 $('.carousel').carousel({
             interval: 3000,
         })
+
+$("#form").submit(function(e) {
+
+    e.preventDefault(); // avoid to execute the actual submit of the form.
+
+    var form = $(this);
+    var url = '/my_form/'
+
+    $.ajax({
+           type: "POST",
+           url: url,
+           data: form.serialize(),
+           success: function(data)
+           {
+               alert("ok");
+           }
+         });
+
+
+});
