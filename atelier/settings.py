@@ -123,7 +123,7 @@ STATICFILES_DIRS=[
     os.path.join(BASE_DIR,'static')
 ]
 
-
+GOOGLE_API_KEY='AIzaSyAgqwkUfPqr4r0cVDUNTuYUD0uKepaMeNk'
 
 
 EMAIL_HOST = 'smtp.gmail.com'

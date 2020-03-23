@@ -208,7 +208,7 @@ Home
                     <div class="col-lg-5 col-md-12">
 
                         <!-- Form contact -->
-                        <form id="form" class="p-5 grey-text" >
+                        <form id="form" class="p-5 grey-text" action='my_form/' method="POST">
                             {% csrf_token %}
                             <div class="md-form form-sm"><i class="fa fa-user prefix"></i>
                                 <input type="text" id="form3" class="form-control form-control-sm" name="name">
@@ -218,6 +218,7 @@ Home
                                 <input type="text" id="form2" class="form-control form-control-sm" name="email">
                                 <label for="form2">Your email</label>
                             </div>
+
                             <div class="md-form form-sm"><i class="fa fa-pencil prefix"></i>
                                 <textarea type="text" id="form8" class="md-textarea form-control form-control-sm"
                                           rows="4" name="message"></textarea>
@@ -278,7 +279,7 @@ Home
                                 });
                               }
                             </script>
-                            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgqwkUfPqr4r0cVDUNTuYUD0uKepaMeNk&callback=initMap"
+                            <script src={{google_api_url}}
                             async defer></script>
 
 
